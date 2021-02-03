@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thilina Dilshan</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/normalize.css">
 <script src='js/typewriter.js'></script>
 <script src='js/prograssbar.js'></script>
+<script src='js/navigation.js'></script>
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <header>
 
@@ -17,7 +19,7 @@
             <span
                     class="txt-rotate"
                     data-period="2000"
-                    data-rotate='[ "software engineer", "project manager", "tech lead","visionary", "first gen", "student@IJSE", "dog person"]'></span><a class='bold_link span_color' id='cursor'>|</a></h2>
+                    data-rotate='[ "software engineer", "project manager", "web developer","app developer",  "student@IJSE", "dog lover"]'></span><a class='bold_link span_color' id='cursor'>|</a></h2>
 
         </div>
 
@@ -34,29 +36,65 @@
 
 
 <div class="broun" >
-  <img src="image/danial-ricaros-FCHlYvR5gJI-unsplash.png" alt="boy" class="header"  >
+  <img src="image/background.png" alt="boy" class="header"  >
 
   <div class="broun" >
     <img height="500px" width="600px" class="myimage"  src="image/mypic.jpg">
   </div>
 </div>
 
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="myInput"/>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul class="mobilemenu">
+      <li><a class="active" href="#about">ABOUT</a></li>
+      <li><a href="#skils">SKILLS</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#Educations">EDUCATIONS</a></li>
+
+
+
+    </ul>
+  </div>
+<script>var checkbox = document.querySelector( '#myInput' );
+var icon = document.querySelector( '#menuToggle span' );
+var listener = function( e ) {
+  if( e.target != checkbox && e.target != icon ) {
+    checkbox.checked = false;
+    document.removeEventListener( 'click', listener );
+  }
+};
+
+checkbox.addEventListener( 'click', function(){
+  if( this.checked ) {
+    document.addEventListener( 'click', listener );
+  }
+});</script>
+</nav>
+
+
+
+
 <aside class="sidebar-left-collapse">
   <div class="sidebar-links">
     <div class="link-red">
       <div class="circle" style="background-image:
-  url('image/70029456_531902960915070_6013557541340971008_o.jpg')">
+  url('image/hedder.jpg')">
       </div>
-      <a href="#">Thilina Dilshan</a>
+      <a href="#">HOME</a>
 
     </div>
 
     <div class="sidebar-links">
       <div class="link-red">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
-        <a href="#">PROJECT</a>
+        <a href="#about">ABOUT</a>
+        <a href="#skils">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#Educations">EDUCATIONS</a>
+
 
 
       </div>
@@ -73,6 +111,18 @@
 
   </div>
 </aside>
+<nav class="active" id="nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Works</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button class="icon" id="toggle">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+  </button>
+</nav>
 <div class="container"></div>
 
 <div class="centered" >WELCOME</div><br>
@@ -82,7 +132,7 @@
 <button class="button2 button02">Contact Me </button>
 
 
-<div class="box-c topic">
+<div id="about" class="box-c topic">
   <div class="custom-underline">About Me.</div>
 </div>
 <div class="sections">
@@ -96,7 +146,7 @@
   </section>
 
 </div>
-<div class="myDetails">
+<div  class="myDetails">
   <p>Name : Thilina Dilshan<br><br>Date of birth : April 21, 2000<br><br>Address : 258/B,Church Road,Chilaw  <br><br>Email : thilina456456@gmail.com <br><br>Phone : +94-077-809-1252</p>
 
 </div>
@@ -107,7 +157,7 @@
   CONTACT</a>
 <div class="broun">
   <div class="box-c topicSkill">
-    <div class="custom-underline"><p>SKILLS.</p></div>
+    <div id="skils" class="custom-underline"><p>SKILLS.</p></div>
   </div>
 
 
@@ -197,14 +247,30 @@
 </div>
 <div class="broun">
   <div class="box-c topicProjects">
-    <div class="custom-underline"><p>PROJECTS.</p></div>
+    <div id="projects" class="custom-underline"><p>PROJECTS.</p></div>
   </div>
   <div class="card"></div>
   <div class="card card-1"></div>
   <div class="card card-2"></div>
 
 </div>
+<!--egucation-->
+
 <button class="btnMore button02">MORE</button>
+<div style="height: 1000px">
+  <div class="box-c topicEducation">
+    <div id="Educations" class="custom-underline">EDUCATION.</div>
+  </div>
+  <div class="base">
+    <ul>
+      <li>><div  style="background-image:
+  url('image/ijse.png')" class="loader-1"></div></li>
+      <li ><div class="loader-1"></div></li>
+      <li ><div class="loader-1"></div></li>
+    </ul>
+  </div>
+</div>
+
 
 <!--client----------------------------------->
 <div class="box-c topicClentSay">
@@ -269,6 +335,9 @@
     </div>
   </div>
 </section>
+
+
+
 <footer>
   <!---------------------------->
   <div class="dw-footer">
